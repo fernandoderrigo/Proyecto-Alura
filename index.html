@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <h1>Encriptador de Texto</h1>
-        <textarea id="inputText" placeholder="Escribe el texto a encriptar aquí..."></textarea>
-        <button id="encriptar" onclick="openDialog('e')">Encriptar</button>
-        <button id="desencriptar" onclick="openDialog('d')" disabled>Desencriptar</button>
-        <textarea id="outputText" placeholder="Resultado..." readonly></textarea>
-        <button onclick="copyToClipboard()">Copiar al Portapapeles</button>
+      <h1>Encriptador de Texto</h1>
+      <textarea
+        id="inputText"
+        placeholder="Escribe el texto a encriptar aquí..."
+      ></textarea>
+      <button id="encriptar" onclick="openDialog('e')">Encriptar</button>
+      <button id="desencriptar" onclick="openDialog('d')" disabled>
+        Desencriptar
+      </button>
+      <textarea id="outputText" placeholder="Resultado..." readonly></textarea>
+      <button onclick="copyToClipboard()">Copiar al Portapapeles</button>
     </div>
 
     <div id="dialog" class="dialog">
-        <div class="dialog-content">
-            <form onsubmit="save(event)">
-                <h2 id="titleDialog">Ingresar Contraseña</h2>
-                <input type="password" id="pass" placeholder="Contraseña">
-                <div class="button-container">
-                    <button type="submit">Aceptar</button>
-                    <button type="button" onclick="closeDialog(event)">Cancelar</button>
-                </div>
-            </form>
-        </div>
+      <div class="dialog-content">
+        <form onsubmit="save(event)">
+          <h2 id="titleDialog">Ingresar Contraseña</h2>
+          <input type="password" id="pass" placeholder="Contraseña" />
+          <div class="button-container">
+            <button type="submit">Aceptar</button>
+            <button type="button" onclick="closeDialog(event)">Cancelar</button>
+          </div>
+        </form>
+      </div>
     </div>
+    <footer>
+      <p>Derechos de autor © 2024 Fernando Tomé</p>
+    </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
